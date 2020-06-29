@@ -1,0 +1,59 @@
+version: '3.4'
+
+services:
+    basket-api:
+        image: swaggerapi/swagger-ui
+        ports:
+            - "1000:8080"
+        environment: 
+            SWAGGER_JSON: /api-specs/swagger-basket-api.json
+        volumes: 
+            - ./:/api-specs
+    catalog-api:
+        image: swaggerapi/swagger-ui
+        ports:
+            - "1001:8080"
+        environment: 
+            SWAGGER_JSON: /api-specs/swagger-catalog-api.json
+        volumes: 
+            - ./:/api-specs
+    locations-api:
+        image: swaggerapi/swagger-ui
+        ports:
+            - "1002:8080"
+        environment: 
+            SWAGGER_JSON: /api-specs/swagger-locations-api.json
+        volumes: 
+            - ./:/api-specs
+    marketing-api:
+        image: swaggerapi/swagger-ui
+        ports:
+            - "1003:8080"
+        environment: 
+            SWAGGER_JSON: /api-specs/swagger-marketing-api.json
+        volumes: 
+            - ./:/api-specs
+    ordering-api:
+        image: swaggerapi/swagger-ui
+        ports:
+            - "1004:8080"
+        environment: 
+            SWAGGER_JSON: /api-specs/swagger-ordering-api.json
+        volumes: 
+            - ./:/api-specs
+    shopping-aggregator-web-api:
+        image: swaggerapi/swagger-ui
+        ports:
+            - "1005:8080"
+        environment: 
+            SWAGGER_JSON: /api-specs/swagger-shopping-aggregator-web-api.json
+        volumes: 
+            - ./:/api-specs
+    shopping-webhooks-api:
+        image: swaggerapi/swagger-ui
+        ports:
+            - "1006:8080"
+        environment: 
+            SWAGGER_JSON: /api-specs/swagger-webhooks-api.json
+        volumes: 
+            - ./:/api-specs
